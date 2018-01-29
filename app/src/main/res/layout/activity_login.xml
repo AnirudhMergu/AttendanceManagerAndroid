@@ -1,0 +1,242 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.anirudhmergu.attendancemanager.LoginActivity"
+    tools:ignore="HardcodedText" >
+
+    <!-- Login progress -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:scrollbarStyle="insideOverlay">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="48dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Track your attendance."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Get detailed analysis.\nNever fall behind."
+                    android:textColor="@color/colorGreyText"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColorHint="@color/colorPrimaryDark">
+
+                <AutoCompleteTextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:shadowColor="@color/colorPrimaryDark"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHighlight="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColorHint="@color/colorPrimaryDark">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:hint="@string/prompt_password"
+                    android:imeActionId="6"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:shadowColor="@color/colorPrimaryDark"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHighlight="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColorLink="@color/colorPrimaryDark" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/email_register_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_rounded_20px"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="Register"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_rounded_20px"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/action_sign_in"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <!-- <Button
+                    android:id="@+id/email_sign_in_facebook"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_facebookblue"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="Facebook"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+                    -->
+
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/email_sign_in_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/layout_facebookblue" />
+
+                <!--<Button
+                    android:id="@+id/email_sign_in_google"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_googlered"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="Google+"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+                    -->
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/email_sign_in_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Don't have an acccount ?  "
+                    android:textColor="@color/colorGreyText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Sign up"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone" />
+
+</LinearLayout>
